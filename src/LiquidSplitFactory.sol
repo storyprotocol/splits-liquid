@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.23;
 
 import {LS1155CloneImpl} from "./CloneImpl/LS1155CloneImpl.sol";
 import {LibClone} from "solady/utils/LibClone.sol";

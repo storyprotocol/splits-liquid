@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.23;
 
 import {Owned} from "solmate/auth/Owned.sol";
-import {ERC1155} from "solmate/tokens/ERC1155.sol";
+import {ERC1155, ERC1155TokenReceiver} from "solmate/tokens/ERC1155.sol";
 import {LibString} from "solmate/utils/LibString.sol";
 import {Base64} from "solady/utils/Base64.sol";
 
@@ -16,7 +16,7 @@ import {utils} from "src/libs/Utils.sol";
 /// clones-with-immutable-args implementation.
 /// Ownership in a split is represented by 1155s (each = 0.1% of split)
 /// @dev This contract uses token = address(0) to refer to ETH.
-contract LS1155CloneImpl is Owned, LiquidSplitCloneImpl, ERC1155 {
+contract LS1155CloneImpl is Owned, LiquidSplitCloneImpl, ERC1155, ERC1155TokenReceiver {
     /// -----------------------------------------------------------------------
     /// errors
     /// -----------------------------------------------------------------------

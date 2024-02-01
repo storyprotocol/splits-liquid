@@ -1,4 +1,5 @@
 .DS_store
+.vscode
 
 # Compiler files
 cache/
@@ -12,3 +13,4 @@ out/
 # Env files
 .env*
 !.env.local.sample
+
